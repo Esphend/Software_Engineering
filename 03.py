@@ -1,6 +1,8 @@
-numbers = [1, 3, 4, 6, 7]
-value = int(input('Введите значение переменной: '))
-if value in numbers:
-    print('Переменная есть в данном массиве')
-else:
-    print('Переменной нет в данном массиве')
+import datetime as datetime
+import time
+
+for i in range(5):
+    now = datetime.datetime.now(datetime.timezone.utc).astimezone()
+    time_format = "%Y-%m-%d %H:%M:%S"
+    print(f"{now:{time_format}}")
+    time.sleep(1)
