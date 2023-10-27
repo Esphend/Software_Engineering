@@ -1,7 +1,14 @@
-a = int(input('Введите значение переменной: '))
-if a < 0:
-    print('Переменная меньше 0')
-elif 0 < a < 10:
-    print('Переменная больше 0, но меньше 10')
-else:
-    print('Переменная больше 10')
+import random
+
+def Gamble():
+    x = random.randint(1, 6)
+    print(x)
+    if x == 5 or x == 6:
+        print('W')
+    elif x == 3 or x == 4:
+        Gamble()
+    elif x == 1 or x == 2:
+        print('L')
+
+if __name__ == '__main__':
+    Gamble()
